@@ -1,0 +1,11 @@
+
+<h1>Add an album to your collection.</h1>
+
+<%= form_for @album do |album_form| %>
+    Title: <%= album_form.text_field :title %><br>
+    Artist: <%= album_form.text_field :artist %><br>
+    Year Released: <%= album_form.text_field :year_released %><br>
+    <%= album_form.submit %>
+
+    <%= link_to 'Back', albums_path %>
+<% end %>

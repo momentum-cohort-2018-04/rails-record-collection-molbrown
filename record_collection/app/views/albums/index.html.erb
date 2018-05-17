@@ -1,0 +1,18 @@
+
+<h1 class="text-center">Molly's Music Library</h1>
+
+<%= link_to 'Add a new album', new_album_path %>
+
+<div id="albums">
+        <% @albums = @albums.sort { |a,b| a['artist'] <=> b['artist'] } %>
+        <% @albums.each do |a| %>
+            <divid="name"><%= a['artist'] %><br></div>
+            <div><%= a['title'] %><br></div>
+            <div><%= a['year_released'] %><br></div>
+            <%= link_to 'Show', album_path(a) %></td>
+            <%= link_to 'Edit', edit_album_path(a) %></td>
+            <%= link_to 'Destroy', album_path(a), method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+            <hr>
+        <% end %>
+    </div>
