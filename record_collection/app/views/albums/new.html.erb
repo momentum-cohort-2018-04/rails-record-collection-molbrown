@@ -2,10 +2,11 @@
 <h1>Add an album to your collection.</h1>
 
 <%= form_for @album do |album_form| %>
-    Title: <%= album_form.text_field :title %><br>
-    Artist: <%= album_form.text_field :artist %><br>
-    Year Released: <%= album_form.text_field :year_released %><br>
+    <div class="form-control">Title: <%= album_form.text_field :title %></div>
+    <div class="form-control">Artist: <%= album_form.text_field :artist %></div>
+    <div class="form-control">Year Released: <%= album_form.text_field :year_released %></div>
     <%= album_form.submit %>
-
-    <%= link_to 'Back', albums_path %>
 <% end %>
+</div>
+
+<%= link_to 'Home', albums_path, class: "btn btn-outline-primary" %>
