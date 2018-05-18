@@ -1,0 +1,10 @@
+<h1>Edit Album</h1>
+ 
+    <%= form_for @album do |album_form| %>
+        <div class="form-control">Title: <%= album_form.text_field :title %></div>
+        <div class="form-control">Artist: <%= album_form.text_field :artist %></div>
+        <div class="form-control">Year Released: <%= album_form.text_field :year_released %></div>
+        <%= album_form.submit %>
+        <% end %>
+ 
+<%= link_to 'Home', albums_path, class: "btn btn-outline-primary" %>

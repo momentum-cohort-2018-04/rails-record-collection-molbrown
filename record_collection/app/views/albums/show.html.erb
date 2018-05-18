@@ -1,0 +1,6 @@
+<div style="height: 250px; width: 250px;" class="bg-light m-2 text-center">
+<%= @album.title %><br>
+<div class="font-weight-light"><%= @album.artist %><br></div>
+<div class="text-black-50 font-weight-light"><%= @album.year_released %><br></div>
+</div>
+<%= link_to 'Home', albums_path, class: "btn btn-outline-primary" %>
